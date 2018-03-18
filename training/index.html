@@ -8,18 +8,52 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" />
   <!--  <script src="js/main.js"></script> -->
 </head>
-<body>
+<body id="body">
     <div class="header">
         <h1 id="heading">Learning Javascript</h1>
     </div>
 
 <div class="container">
-<button onclick="showDate()" ondblclick="clearDate()">Show Date</button>
-<h1 id="time"> </h1>
+<!-- <button onclick="showDate()" ondblclick="clearDate()">Show Date</button> 
+<h1 id="time"> </h1> -->
+
+<form method="POST" action="something.php" name="myForm">
+    <div>
+        <label>First Name</label>
+        <input type="text" name="firstName" id="firstName" />
+    </div>
+    <br />
+    <div>
+        <label>Last Name</label>
+        <input type="text" name="lastName" id="lastName" />
+    </div>
+    <br />
+    <div>
+        <label>Background</label>
+        <select name="background" id="background" onchange="changeBackground(this)">
+           <option value="white">--None--</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
+    </div>
+    <br />
+    <input type="submit" value="Submit" />
+</form>
 
 </div>
 
+
+
 <script>
+
+function changeBackground(x) {
+    console.log(x.value);
+    var body = document.getElementById('body');
+    body.style.backgroundColor = x.value;
+}
+
+
 
 /* two functions. The showDate function, shows the date, once the button is clicked and the clearDate function removes the date, once the button is double clicked.
 function showDate() {
