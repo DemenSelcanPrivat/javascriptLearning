@@ -10,18 +10,33 @@
 </head>
 <body>
     <div class="header">
-        <h1>Learning Javascript</h1>
+        <h1 id="heading">Learning Javascript</h1>
     </div>
 
 <div class="container">
- 
+<button onclick="showDate()" ondblclick="clearDate()">Show Date</button>
+<h1 id="time"> </h1>
 
 </div>
 
 <script>
+
+/* two functions. The showDate function, shows the date, once the button is clicked and the clearDate function removes the date, once the button is double clicked.
+function showDate() {
+   var time = document.getElementById('time');
+   time.innerHTML = Date();
+}
+
+function clearDate() {
+   var time = document.getElementById('time');
+   time.innerHTML = '';
+}
+
+*/
+/* 
 var fruit = 'orange';
 
-/* Switch functions
+Switch functions
 switch(fruit) {
     case "banana":
         document.write('I hate bananas');
